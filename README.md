@@ -86,3 +86,20 @@ python tools/generate.py
 ## License
 
 MPL-2.0 — see [`LICENSE`](LICENSE).
+
+### You may only redistribute this mod with the credit intact
+
+This mod is a derivative work of TierTagger by **uku** and **netiyiy (original
+creator)** and is licensed under MPL-2.0. Anyone who builds, hosts, mirrors or
+redistributes the jar — free or paid, on Modrinth, CurseForge, a launcher, a server
+or anywhere else — **must** keep the original credit:
+
+- ship [`ATTRIBUTION.md`](ATTRIBUTION.md) and `LICENSE` with your distribution, and
+- keep `netiyiy (original creator)` and `uku` listed as authors in
+  `src/main/resources/fabric.mod.json`
+
+You are free to rename the mod, change the mod id and change the code, as long as
+that credit stays visible and your modified files remain published under MPL-2.0.
+Removing or hiding the original authors' credit is not allowed.
+
+Full rules: [`ATTRIBUTION.md`](ATTRIBUTION.md).
