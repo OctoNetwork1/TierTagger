@@ -69,16 +69,16 @@ tasks.jar {
     }
 }
 
-// Always install the built jar into the NoRiskClient profile mods folder.
 // In the obfuscated (remap) era the publishable artifact comes from remapJar,
 // in the no-remap era the plain jar already is the final artifact.
 val mcVersion = project.property("minecraft_version") as String
-val modsDir = file("C:/Users/cobwe/AppData/Roaming/norisk/NoRiskClientV3/data/profiles/${project.property("norisk_profile")}/mods")
+val modsDir = (project.findProperty("norisk_mods_dir") as String?)?.let { file(it) }
 
 val installTask: Task = tasks.findByName("remapJar") ?: tasks.getByName("jar")
 installTask.doLast(object : Action<Task> {
     override fun execute(task: Task) {
     val jarFile = (task as org.gradle.api.tasks.bundling.AbstractArchiveTask).archiveFile.get().asFile
+    if (modsDir == null) return
     modsDir.mkdirs()
     modsDir.listFiles()
         ?.filter { it.isFile && it.name.startsWith("AxotiersTiertagger-") && (it.name.endsWith("+mc$mcVersion.jar") || it.name.endsWith("-dev.jar")) && it.name != jarFile.name }
@@ -87,9 +87,9 @@ installTask.doLast(object : Action<Task> {
     val dest = File(modsDir, jarFile.name)
     try {
         jarFile.copyTo(dest, overwrite = true)
-        println("Installed ${jarFile.name} -> ${modsDir.absolutePath}")
+        println("Installed ${jarFile.name} -> ${dest.absolutePath}")
     } catch (e: Exception) {
-        logger.warn("Could not install ${jarFile.name} into ${modsDir.absolutePath}: ${e.message}")
+        logger.warn("Could not install ${jarFile.name} into ${dest.absolutePath}: ${e.message}")
         logger.warn("File may be locked (close NoRiskClient/Minecraft) and copy manually later.")
     }
     }
