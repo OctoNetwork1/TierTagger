@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "axotiers-tiertagger",
+  "version": "${version}",
+  "name": "AxotiersTiertagger",
+  "description": "Display player's PvP Tiers in their nametag!",
+  "authors": ["uku", "netiyiy (original creator)"],
+  "contact": {
+    "sources": "https://github.com/mctiers-dev/TierTagger.git"
+  },
+  "license": "MPL-2.0",
+  "icon": "assets/axotiers-tiertagger/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "com.kevin.tiertagger.TierTagger"
+    ],
+    "ukulib": [
+      "com.kevin.tiertagger.config.UkulibIntegration"
+    ]
+  },
+  "mixins": [
+    "TierTagger.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.17",
+    "minecraft": "26.3",
+    "ukulib": ">=2.2.0"
+  }
+}
