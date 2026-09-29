@@ -9,18 +9,11 @@ Ht1 | Ooh_Netiyiy
 
 Very smol but very useful mod; you'll likey likey :)
 
-## Credits & License — please read
+## Credits
 
-This project is a **fork / derivative work** of the original TierTagger project:
-
-- Original project: https://github.com/mctiers-dev/TierTagger
-- Original creators: **uku**, **netiyiy**
-- License: **MPL-2.0**
-
-All original copyright notices and authorship are preserved in
-`src/main/resources/fabric.mod.json` and in the `LICENSE` file, as required by
-the MPL-2.0. This repository is maintained by OctoFiles / OctoNetwork1 and contains
-modifications made on top of the original code.
+Maintained by **DoctoFrog** and **DoctoCapybara**. Based on TierTagger by uku and
+netiyiy (https://github.com/mctiers-dev/TierTagger), licensed under MPL-2.0.
+See [`ATTRIBUTION.md`](ATTRIBUTION.md).
 
 ## API configuration
 
