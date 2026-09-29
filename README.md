@@ -1,13 +1,15 @@
-# Tier Tagger (AxotiersTiertagger)
+# OctoTagger
 
-A Minecraft Fabric (client-side) mod that displays every player's PvP tier from the
-tier lists in-game, in your nametag, tab list, text displays and more — like this:
+A client-side Minecraft Fabric mod that shows every player's PvP tier from the tier
+lists directly in game — in your nametag, in the tab list, on text displays and on
+the player list screens. Example output:
 
 ```
-Ht1 | Ooh_Netiyiy
+Ht1 | Steve
 ```
 
-Very smol but very useful mod; you'll likey likey :)
+Small, focused and lightweight: it only fetches the tier data it needs and caches
+it, so it stays out of your way.
 
 ## Credits
 
